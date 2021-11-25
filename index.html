@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 8</title>
+  <script type="module" src="./src/app.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  
+    <video autoplay loop src="./assets/batman.mp4" id="video">
+    </video>
+    <video autoplay loop src="./assets/chainsaw man.mp4" id="video2">
+    </video>
+    <video autoplay loop src="./assets/Afrodita.mp4" id="video3">
+    </video>
+    
+    <div id="content">
+      <img src="./assets/batmanninja.jpg" class="imagen1">
+      <img src="./assets/AfroditaP.jpg" class="imagen2">
+      <img src="./assets/chainsaw.gif" class="imagen3">
+
+      <div class="title1"> 
+        <span>TIPOS DE ANIMACIÓN</span>
+      </div>
+  
+      <!-- boton -->
+      <div class="btnOption small" data-size="10">
+        <div class="title">Ingresar</div>
+      </div>
+    </div>
+  
+  
+    <script type="module">
+  
+      const options = document.querySelectorAll('.btnOption');
+      const backBtn = document.querySelector('#backBtn');
+  
+  
+  
+      options.forEach(optionSelected => {
+        optionSelected.onclick = function(){
+  
+          toogleContent();
+  
+        }
+      });
+  
+      backBtn.onclick = function(){
+        toogleContent();
+  
+      }
+  
+      function toogleContent (){
+        content.style.display = content.style.display == 'none' ? 'flex' : 'none';
+      }
+  
+    </script>
+
+
+
+</body>
+
+</html>
